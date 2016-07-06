@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11422CFD99BC63657FAC717E /* Pods_Lab05.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA67F741F8E1098B380796B /* Pods_Lab05.framework */; };
 		E418F0931D1EE9DF00FBBD04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E418F0921D1EE9DF00FBBD04 /* main.m */; };
 		E418F0961D1EE9DF00FBBD04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E418F0951D1EE9DF00FBBD04 /* AppDelegate.m */; };
 		E418F0991D1EE9DF00FBBD04 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = E418F0981D1EE9DF00FBBD04 /* Home.m */; };
@@ -50,9 +51,12 @@
 		E4841CF61D239E2400557819 /* jal_arandas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4841CF41D239E2400557819 /* jal_arandas.jpg */; };
 		E4841CF71D239E2400557819 /* jal_guadalajara.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4841CF51D239E2400557819 /* jal_guadalajara.jpg */; };
 		E4841CFA1D23A86B00557819 /* DestinationDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = E4841CF91D23A86B00557819 /* DestinationDetails.m */; };
+		E4CCF4161D2CAD0200969202 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E4CCF4151D2CAD0200969202 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B06207B5B34468F8E0DBC52 /* Pods-Lab05.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab05.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lab05/Pods-Lab05.debug.xcconfig"; sourceTree = "<group>"; };
+		8FA67F741F8E1098B380796B /* Pods_Lab05.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab05.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E418F08E1D1EE9DF00FBBD04 /* Lab05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E418F0921D1EE9DF00FBBD04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E418F0941D1EE9DF00FBBD04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		E4841CF51D239E2400557819 /* jal_guadalajara.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jal_guadalajara.jpg; sourceTree = "<group>"; };
 		E4841CF81D23A86B00557819 /* DestinationDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationDetails.h; sourceTree = "<group>"; };
 		E4841CF91D23A86B00557819 /* DestinationDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationDetails.m; sourceTree = "<group>"; };
+		E4CCF4151D2CAD0200969202 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		E7E8503E79E85E533348A321 /* Pods-Lab05.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab05.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lab05/Pods-Lab05.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,17 +117,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11422CFD99BC63657FAC717E /* Pods_Lab05.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C044215A064A55D0BA94CF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FA67F741F8E1098B380796B /* Pods_Lab05.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB75A5D454EFA0718626CBCC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B06207B5B34468F8E0DBC52 /* Pods-Lab05.debug.xcconfig */,
+				E7E8503E79E85E533348A321 /* Pods-Lab05.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E418F0851D1EE9DF00FBBD04 = {
 			isa = PBXGroup;
 			children = (
 				E418F0901D1EE9DF00FBBD04 /* Lab05 */,
 				E418F08F1D1EE9DF00FBBD04 /* Products */,
+				DB75A5D454EFA0718626CBCC /* Pods */,
+				0C044215A064A55D0BA94CF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +172,7 @@
 				E418F0A51D1EE9DF00FBBD04 /* Info.plist */,
 				E418F09D1D1EE9DF00FBBD04 /* Lab05.xcdatamodeld */,
 				E418F0911D1EE9DF00FBBD04 /* Supporting Files */,
+				E4CCF4151D2CAD0200969202 /* Podfile */,
 			);
 			path = Lab05;
 			sourceTree = "<group>";
@@ -237,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E418F0A81D1EE9DF00FBBD04 /* Build configuration list for PBXNativeTarget "Lab05" */;
 			buildPhases = (
+				16F40A0B7451F9E2703D03D6 /* [CP] Check Pods Manifest.lock */,
 				E418F08A1D1EE9DF00FBBD04 /* Sources */,
 				E418F08B1D1EE9DF00FBBD04 /* Frameworks */,
 				E418F08C1D1EE9DF00FBBD04 /* Resources */,
+				E82078BEEA3D79263404B0F2 /* [CP] Embed Pods Frameworks */,
+				BC5AB7B1DC13A14EE2F06367 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,6 +324,7 @@
 				E4841CEB1D235CB000557819 /* slp_xilitla.jpg in Resources */,
 				E4841CD91D235CB000557819 /* nvo_apodaca.jpg in Resources */,
 				E4841CE51D235CB000557819 /* qr_playadelcarmen.jpg in Resources */,
+				E4CCF4161D2CAD0200969202 /* Podfile in Resources */,
 				E4841CF61D239E2400557819 /* jal_arandas.jpg in Resources */,
 				E4841CF31D238E7700557819 /* cellMunipios.xib in Resources */,
 				E4841CE01D235CB000557819 /* oax_sanlorenzo.jpg in Resources */,
@@ -327,6 +358,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16F40A0B7451F9E2703D03D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC5AB7B1DC13A14EE2F06367 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab05/Pods-Lab05-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E82078BEEA3D79263404B0F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab05/Pods-Lab05-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E418F08A1D1EE9DF00FBBD04 /* Sources */ = {
@@ -450,6 +529,7 @@
 		};
 		E418F0A91D1EE9DF00FBBD04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B06207B5B34468F8E0DBC52 /* Pods-Lab05.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lab05/Info.plist;
@@ -461,6 +541,7 @@
 		};
 		E418F0AA1D1EE9DF00FBBD04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7E8503E79E85E533348A321 /* Pods-Lab05.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lab05/Info.plist;
