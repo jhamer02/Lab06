@@ -52,6 +52,7 @@
 		E4841CF71D239E2400557819 /* jal_guadalajara.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4841CF51D239E2400557819 /* jal_guadalajara.jpg */; };
 		E4841CFA1D23A86B00557819 /* DestinationDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = E4841CF91D23A86B00557819 /* DestinationDetails.m */; };
 		E4CCF4161D2CAD0200969202 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E4CCF4151D2CAD0200969202 /* Podfile */; };
+		E4CCF4181D2CD6D900969202 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4CCF4171D2CD6D900969202 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,7 @@
 		E4841CF81D23A86B00557819 /* DestinationDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationDetails.h; sourceTree = "<group>"; };
 		E4841CF91D23A86B00557819 /* DestinationDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationDetails.m; sourceTree = "<group>"; };
 		E4CCF4151D2CAD0200969202 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		E4CCF4171D2CD6D900969202 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7E8503E79E85E533348A321 /* Pods-Lab05.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab05.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lab05/Pods-Lab05.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				E418F0A01D1EE9DF00FBBD04 /* Assets.xcassets */,
 				E418F0A21D1EE9DF00FBBD04 /* LaunchScreen.storyboard */,
 				E418F0A51D1EE9DF00FBBD04 /* Info.plist */,
+				E4CCF4171D2CD6D900969202 /* GoogleService-Info.plist */,
 				E418F09D1D1EE9DF00FBBD04 /* Lab05.xcdatamodeld */,
 				E418F0911D1EE9DF00FBBD04 /* Supporting Files */,
 				E4CCF4151D2CAD0200969202 /* Podfile */,
@@ -324,6 +327,7 @@
 				E4841CEB1D235CB000557819 /* slp_xilitla.jpg in Resources */,
 				E4841CD91D235CB000557819 /* nvo_apodaca.jpg in Resources */,
 				E4841CE51D235CB000557819 /* qr_playadelcarmen.jpg in Resources */,
+				E4CCF4181D2CD6D900969202 /* GoogleService-Info.plist in Resources */,
 				E4CCF4161D2CAD0200969202 /* Podfile in Resources */,
 				E4841CF61D239E2400557819 /* jal_arandas.jpg in Resources */,
 				E4841CF31D238E7700557819 /* cellMunipios.xib in Resources */,
