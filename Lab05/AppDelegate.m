@@ -10,6 +10,19 @@
 #import <Google/Analytics.h>
 @import GoogleMaps;
 
+/***Fabric***/
+#import <Fabric/Fabric.h>
+#import <DigitsKit/DigitsKit.h>
+
+
+/******Pushwoosh********/
+@import CoreLocation;
+@import SystemConfiguration;
+@import AVFoundation;
+@import ImageIO;
+
+#import <Pushwoosh/PushNotificationManager.h>
+/***********************/
 
 @interface AppDelegate ()
 
@@ -31,6 +44,32 @@
     GAI *gai = [GAI sharedInstance];
     gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
     gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
+    
+    
+    /**********PushWoosh************/
+        //lots of your initialization code
+        
+        //-----------PUSHWOOSH PART-----------
+        // set custom delegate for push handling, in our case - view controller
+        PushNotificationManager * pushManager = [PushNotificationManager pushManager];
+        pushManager.delegate = self;
+        
+        // handling push on app start
+        [[PushNotificationManager pushManager] handlePushReceived:launchOptions];
+        
+        // make sure we count app open in Pushwoosh stats
+        [[PushNotificationManager pushManager] sendAppOpen];
+        
+        // register for push notifications!
+        [[PushNotificationManager pushManager] registerForPushNotifications];
+        
+    /*******************************/
+    
+    
+    /*** Fabric ****/
+    [Fabric with:@[[Digits class]]];
+
+    /***************/
     
     return YES;
 }
@@ -137,6 +176,25 @@
             abort();
         }
     }
+}
+
+// system push notification registration success callback, delegate to pushManager
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [[PushNotificationManager pushManager] handlePushRegistration:deviceToken];
+}
+
+// system push notification registration error callback, delegate to pushManager
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    [[PushNotificationManager pushManager] handlePushRegistrationFailure:error];
+}
+
+// system push notifications callback, delegate to pushManager
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [[PushNotificationManager pushManager] handlePushReceived:userInfo];
+}
+
+- (void) onPushAccepted:(PushNotificationManager *)pushManager withNotification:(NSDictionary *)pushNotification onStart:(BOOL)onStart {
+    NSLog(@"Push notification received");
 }
 
 @end

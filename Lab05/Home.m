@@ -7,6 +7,7 @@
 //
 
 #import "Home.h"
+#import <DigitsKit/DigitsKit.h>
 
 @interface Home ()
 //@property NSMutableArray *destinationTitles;
@@ -26,8 +27,32 @@
 /**********************************************************************************************/
 #pragma mark - Initialization methods
 /**********************************************************************************************/
+DGTAuthenticateButton *authButton;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //DGTAuthenticateButton *authButton;
+    authButton = [DGTAuthenticateButton buttonWithAuthenticationCompletion:^(DGTSession *session, NSError *error) {
+        if (session.userID) {
+            // TODO: associate the session userID with your user model
+            NSString *msg = [NSString stringWithFormat:@"Phone number: %@", session.phoneNumber];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You are logged in!"
+                                                            message:msg
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        } else if (error) {
+            NSLog(@"Authentication error: %@", error.localizedDescription);
+        }
+    }];
+    authButton.center = self.view.center;
+    [self.view addSubview:authButton];
+    
+
+    
+    //self.tblHome.userInteractionEnabled=true;
+    //self.tblHome.hidden=false;
     [self initController];
 }
 //-------------------------------------------------------------------------------
@@ -45,6 +70,8 @@
     self.destinationTitles          = [[NSMutableArray alloc] initWithObjects: @"Oaxaca", @"Jalisco", @"Nuevo León", @"San Luis", @"Quintana Roo", nil];
     self.destinationPhotos          = [[NSMutableArray alloc] initWithObjects: @"oaxaca.png", @"jalisco.png", @"nuevoleon.png", @"sanluis.png", @"quintanaroo.png", nil];
     self.destinationDescriptions   = [[NSMutableArray alloc] initWithObjects: @"Oaxaca se destaca por su cultura", @"Jalisco es un estado colonial", @"Destino para negocios", @"DEstino ideal para el ecoturismo", @"Estado con las mejore playas del país", nil];
+    
+
 }
 /**********************************************************************************************/
 #pragma mark - Table source and delegate methods
@@ -93,6 +120,7 @@
     //Initialize cells
     cellHome *cell = (cellHome *)[tableView dequeueReusableCellWithIdentifier:@"cellHome"];
     
+    
     if (cell == nil) {
         [tableView registerNib:[UINib nibWithNibName:@"cellHome" bundle:nil] forCellReuseIdentifier:@"cellHome"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"cellHome"];
@@ -112,6 +140,8 @@
 //    self.stPhotoSelected        = self.destinationPhotos[indexPath.row];
     self.IState = indexPath.row;
     
+    
+    
     [self performSegueWithIdentifier:@"Municipios" sender:self];
 }
 /**********************************************************************************************/
@@ -126,6 +156,18 @@
 //        destination.destinationPhoto        = self.stPhotoSelected;
 //        
     }
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0)
+    {
+        authButton.userInteractionEnabled = false;
+        authButton.hidden = true;
+        
+        self.tblHome.userInteractionEnabled=true;
+        self.tblHome.hidden=false;
+    }
+     
 }
 
 @end

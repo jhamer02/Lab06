@@ -10,7 +10,9 @@
 #import "cellHome.h"
 #import "Municipios.h"
 
+
 @interface Home : UIViewController
+@property (strong, nonatomic) IBOutlet UITableView *tblHome;
 
 
 @end
